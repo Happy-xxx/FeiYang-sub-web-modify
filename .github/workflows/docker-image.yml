@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  PROJECT: sub-web-modify
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -23,9 +26,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: 构建并推送 Docker 镜像
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v3.0.0
       with:
         context: .
-        platforms: linux/amd64,linux/arm,linux/arm64
+        platforms: linux/amd64,linux/arm64
         push: true
-        tags: dongshul/sub-web-modify:latest
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.PROJECT }}:latest          
