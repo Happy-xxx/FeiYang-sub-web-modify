@@ -467,10 +467,7 @@ export default {
           "自动判断客户端": "auto",
         },
         shortTypes: {
-          "v1.mk": "https://v1.mk/short",
-          "d1.mk": "https://d1.mk/short",
-          "dlj.tf": "https://dlj.tf/short",
-          "suo.yt": "https://suo.yt/short",
+          "suc.dxsll.v6.army": "https://suc.dxsll.v6.army:48206",         
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
